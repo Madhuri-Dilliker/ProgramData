@@ -1,3 +1,10 @@
+#create a function to merge two dataset
+#1.loading the excel file
+#2.Loading dataset present in different sheets in dataframes
+#3.Define merge function
+#4.Call merge function
+#5.Testing the function using key used as parameter
+
 #importing python library
 import pandas as pd
 
