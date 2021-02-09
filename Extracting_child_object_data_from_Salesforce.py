@@ -8,13 +8,15 @@ Created on Wed Feb  3 15:37:39 2021
 #https://towardsdatascience.com/using-python-to-get-salesforce-data-97bb5a7ef2cf
 #https://www.oktana.com/python-and-salesforce/
 
+
 #importing the libary
 #!pip install simple_salesforce
 import pandas as pd 
 from simple_salesforce import Salesforce
-
 import json
+#open json file
 with open(r'C:\Users\Madhuri\Documents\GitHub\ProgramData\Spyder\Credential.json') as Credential:
+#load json file contains
      creds = json.load(Credential)
 #salesforce credentials
 sf = Salesforce(
@@ -22,7 +24,6 @@ username=creds['username'],
 password=creds['password'],             
 security_token=creds['token']
 )
-
 #soql query to extract data from child object
 SOQL="SELECT Date_of_Birth__c,First_Name__c,HSC_Gender__c,Last_Name__c,Test_number__c FROM Child__c"
 
